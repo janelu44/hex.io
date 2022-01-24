@@ -9,7 +9,7 @@ body {
   margin: 0;
 
   /* Grid */
-  position: absolute;
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr) repeat(2, 1.2fr);
   grid-template-rows: 0.1fr 0.5fr repeat(3, 3fr) repeat(2, 1fr);
@@ -142,8 +142,8 @@ img.playButton, img.statsButton, img.helpButton {
 .helpButton::after {
   content: 'RULES';
 }
-/* -------------------- */
 
+/* -------------------- */
 
 a {
   color: #06adf0;

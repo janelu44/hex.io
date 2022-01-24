@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300;1,400&display=swap"
         rel="stylesheet">
+    <link href="stylesheets/chat.css" rel="stylesheet">
+
 
     <title>HEX.</title>
 
@@ -24,6 +26,12 @@
         </div>
 
         <div class='player-container' id='p1'>
+
+            <div class='mesage-container'>
+                <div class='message-bubble'>
+                    <p class='message-text'>vino putin sa milbei</p>
+                </div>
+            </div>
 
             <div class='player-moves'>
                 <p class='player-moves' id='p1'>Blue moves</p>
@@ -56,12 +64,20 @@
 
     </div>
 
+    <div class="chat-container">
+        <div class="chat">
+            <input type="text">
+        </div>
+    </div>
+
+
     <script src='javascripts/game-data.js'></script>
     <script src='javascripts/nickname.js'></script>
     <script src='javascripts/socket.js'></script>
     <script src='javascripts/center-board.js'></script>
     <script src='javascripts/generate-board.js'></script>
     <script src='javascripts/client-play.js'></script>
+    <script src='javascripts/chat.js'></script>
 
 </body>
 

@@ -1,7 +1,7 @@
 (function setupSocket() {
 
     // open a web socket
-    window.socket = new WebSocket("ws://hex-io.herokuapp.com/");
+    window.socket = new WebSocket("ws://localhost:3000/");
 
     // when the socket opens, send nickname to server
     socket.onopen = function () {
