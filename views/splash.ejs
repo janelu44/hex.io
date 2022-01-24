@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang='en-US'>
+
+    <meta charset='utf-8'>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@700&display=swap" rel="stylesheet">
+    <link href="stylesheets/splash.css" rel="stylesheet">
+
+    <title>HEX.</title>
+</head>
+
+<body>
+
+    <div class="title">
+        <h1>HEX.</h1>
+    </div>
+
+    <div class="subtitle">
+        <h1>Live games: <%= liveGames %>
+        </h1>
+        <h1>Games played: <%= completedGames %>
+        </h1>
+        <h1>Players in-game: <%= onlineUsers %>
+        </h1>
+    </div>
+
+    <div class="playButton hexButton">
+        <img src='./images/play.svg' class='playButton' />
+    </div>
+
+    <div class="statsButton hexButton">
+        <img src='./images/stats.svg' class='statsButton'>
+    </div>
+
+    <div class="helpButton hexButton">
+        <img src='./images/help.svg' class='helpButton'>
+    </div>
+
+</body>
+
+<script src='./javascripts/splash.js'></script>
+
+</html>

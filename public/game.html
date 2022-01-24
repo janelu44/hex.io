@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+
+<head lang='en-US'>
+
+    <meta charset='utf-8'>
+
+    <link href="stylesheets/game.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <title>HEX.</title>
+
+</head>
+
+<body>
+
+    <div class='game-container'>
+
+        <div class='winner-container'>
+            <a href='/' class='winner'></a>
+        </div>
+
+        <div class='player-container' id='p1'>
+
+            <div class='player-moves'>
+                <p class='player-moves' id='p1'>Blue moves</p>
+            </div>
+
+            <div class='blueHex' id='p1-marker'></div>
+
+            <p class='player-name' id='p1'></p>
+            <br>
+            <p class='timer' id='blueTimer'></p>
+
+        </div>
+
+        <div class='player-container' id='p2'>
+
+            <div class='player-moves'>
+                <p class='player-moves' id='p2'>Red moves</p>
+            </div>
+
+            <div class='redHex' id='p2-marker'></div>
+
+            <p class='player-name' id='p2'></p>
+            <br>
+            <p class='timer' id='redTimer'></p>
+
+
+        </div>
+
+        <div class='board-container'></div>
+
+    </div>
+
+    <script src='javascripts/game-data.js'></script>
+    <script src='javascripts/nickname.js'></script>
+    <script src='javascripts/socket.js'></script>
+    <script src='javascripts/center-board.js'></script>
+    <script src='javascripts/generate-board.js'></script>
+    <script src='javascripts/client-play.js'></script>
+
+</body>
+
+</html>

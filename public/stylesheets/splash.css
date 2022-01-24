@@ -1,0 +1,270 @@
+body {
+
+  /* General */
+  color: white;
+  background-image: url('../images/hex_bg.jpg');
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+
+  /* Grid */
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) repeat(2, 1.2fr);
+  grid-template-rows: 0.1fr 0.5fr repeat(3, 3fr) repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Title */
+div.title { 
+  font-family: 'Miriam Libre', sans-serif;
+  font-size: 300;
+  grid-area: 3 / 1 / 6 / 4;
+  justify-self: center;  
+  align-self: start;
+  position:absolute;
+  text-decoration: underline;
+
+  /* Animation */
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+div.title > h1 {
+    font-size: 300px;
+}
+
+/* -------------------- */
+
+/* Subtitle */
+div.subtitle{ 
+  grid-area: 5 / 1 / 6 / 4; 
+  justify-self: center;  
+  align-self: end;
+  position:absolute;
+
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+}
+
+div.subtitle > h1{ 
+  font-size: 45px;
+  text-align: center;
+}
+
+/* -------------------- */
+
+/* Fade in animation */
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.hexButton {
+  transition: all .35s ease-in-out;
+}
+
+/*Zoom on hover animation */
+.hexButton:hover{
+  transform: scale(1.1); 
+} 
+
+/* Buttons */
+div.playButton { 
+  grid-area: 3 / 4 / 4 / 5; 
+  justify-self: left; 
+  align-self: flex-start;
+  position:absolute;
+}
+
+div.statsButton  { 
+  grid-area: 4 / 5 / 5 / 6; 
+  justify-self: center; 
+  align-self: end;
+  position:absolute;
+}
+
+div.helpButton { 
+  grid-area: 5 / 4 / 6 / 5;
+  justify-self: left;  
+  align-self: end;
+  position:absolute;
+} 
+
+img.playButton:active {
+  content: url('../images/play_clicked.svg');
+}
+
+img.statsButton:active {
+  content: url('../images/stats_clicked.svg');
+}
+
+img.helpButton:active {
+  content: url('../images/help_clicked.svg');
+}
+
+img.playButton, img.statsButton, img.helpButton {
+  width: 250px;
+  height: 250px;
+}
+
+/* Button texts */
+.playButton::after, .statsButton::before, .helpButton::after{
+  position: absolute;
+  font-size: 40px;
+  color: white;
+  top: 100px;
+}
+
+.playButton::after {
+  content: 'PLAY';
+}
+
+.statsButton::before {
+  left: -130px;
+  content: 'EXTRA';
+}
+
+.helpButton::after {
+  content: 'RULES';
+}
+/* -------------------- */
+
+
+a {
+  color: #06adf0;
+}
+
+/* responsive interface */
+
+@media (max-width: 1600px) {
+  img.playButton, img.statsButton, img.helpButton {
+    width: 230px;
+    height: 230px;
+  }
+}
+
+@media (max-height: 1000px) {
+
+  div.title > h1 {
+    font-size: 270px;
+  }
+
+  div.subtitle > h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-height: 950px) {
+
+  div.title > h1 {
+    font-size: 250px;
+  }
+
+  div.subtitle > h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-height: 850px) {
+
+  div.title > h1 {
+    font-size: 230px;
+  }
+
+  div.subtitle > h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-height: 800px) {
+
+  div.title > h1 {
+    font-size: 200px;
+  }
+
+  div.subtitle > h1 {
+    font-size: 25px;
+  }
+
+  img.playButton, img.statsButton, img.helpButton {
+    width: 200px;
+    height: 200px;
+  }
+
+  .playButton::after, .statsButton::before, .helpButton::after{
+    font-size: 34px;
+    top: 90px;
+  }
+
+  .statsButton::before {
+    left: -105px;
+  }
+
+
+}
+
+@media (max-height: 700px) {
+
+  div.title > h1 {
+    font-size: 170px;
+  }
+
+  div.subtitle > h1 {
+    font-size: 20px;
+  }
+
+  img.playButton, img.statsButton, img.helpButton {
+    width: 170px;
+    height: 170px;
+  }
+
+  .playButton::after, .statsButton::before, .helpButton::after{
+    font-size: 30px;
+    top: 70px;
+  }
+
+  .statsButton::before {
+    left: -90px;
+  }
+  
+}
+
+@media (max-height: 600px) {
+
+  div.subtitle > h1 {
+    font-size: 14px;
+  }
+
+  img.playButton, img.statsButton, img.helpButton {
+    width: 150px;
+    height: 150px;
+  }
+
+  .playButton::after, .statsButton::before, .helpButton::after{
+    font-size: 20px;
+    top: 60px;
+  }
+
+  .statsButton::before {
+    left: -60px;
+  }
+
+
+
+}
+/* -------------------- */
