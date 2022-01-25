@@ -27,22 +27,3 @@ document.querySelector('img.helpButton').addEventListener('click', function () {
     // redirect user to game rules
     window.open('https://en.wikipedia.org/wiki/Hex_(board_game)#Game_play');
 });
-
-// audio for button hover
-let audio = new Audio('./sounds/activesound.mp3');
-
-// select all buttons
-let hexButtons = document.querySelectorAll('.hexButton');
-
-// play audio on hover
-for (let i = 0; i < hexButtons.length; i++) {
-    hexButtons[i].addEventListener('mouseover', function () {
-        audio.play();
-    });
-
-    hexButtons[i].addEventListener('mouseout', function () {
-        audio.pause();
-        audio.currentTime = 0;
-    })
-}
-
