@@ -45,30 +45,35 @@ div.chat-container {
     bottom: 5%;
   }
 
-
   div.message-container {
+    width: 70%;
+    margin: 0 15% 0 15%;
+    bottom: 110%;
     position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    width: 100%;
-    overflow: hidden;
   }
 
   div.message-bubble {
-    width: 80%;
+    width: fit-content;
+    max-width: 100%;
     height: auto;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 0 auto;
     background-color: white;
-    position: absolute;
-    bottom: 110%;
     border: 10px solid white;
     border-radius: 10px;
-
     opacity: 0%;
     transition: opacity 1s cubic-bezier(0.24, 1.15, 0.98, 1.06);
   }
+
+  div.message-bubble:after {
+    content:"";
+    border-left: 26px solid transparent;
+    border-right: 26px solid transparent;
+    position: absolute;
+    left: 50%;
+    bottom: -13px;
+    border-top: 15px solid white;
+}
+
 
   div.message-bubble.display {
       opacity: 100%;

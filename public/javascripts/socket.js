@@ -21,6 +21,7 @@
         if (msg.type == 'PLAYER-TYPE') {
             window.gameData = new GameData(window.nickname, (msg.data == 'r') ? 'red' : 'blue');
             console.log(window.gameData);
+            init_chat();
         }
 
         // set opponent nickname
