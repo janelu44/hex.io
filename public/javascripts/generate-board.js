@@ -49,22 +49,22 @@ function generateRow(tableId, offset) {
         // determine type of hex
         if (tableId == 0 || tableId == 10) {
             if (i == 0 || i == 10) {
-                inner.className = 'cornerHex inner';
-                hex.className = 'cornerHex';
+                inner.className = 'corner hex inner';
+                hex.className = 'corner hex';
             }
             else {
-                inner.className = 'redHex inner';
-                hex.className = 'redHex';
+                inner.className = 'red hex inner';
+                hex.className = 'red hex';
             }
         }
         else {
             if (i == 0 || i == 10) {
-                inner.className = 'blueHex inner';
-                hex.className = 'blueHex';
+                inner.className = 'blue hex inner';
+                hex.className = 'blue hex';
             }
             else {
-                inner.className = 'plainHex inner';
-                hex.className = 'plainHex';
+                inner.className = 'plain hex inner';
+                hex.className = 'plain hex';
             }
         }
 

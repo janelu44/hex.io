@@ -72,13 +72,13 @@ GameData.prototype.togglePlayerTurn = function (toggle) {
         this.playerMoveIndicator.style.visibility = 'visible';
         this.opponentMoveIndicator.style.visibility = 'hidden';
         this.playerTimer.style.color = 'yellow';
-        this.opponentTimer.style.color = 'white';
+        this.opponentTimer.style.color = 'gray';
     }
     else {
         this.isPlayerTurn = false;
         this.playerMoveIndicator.style.visibility = 'hidden';
         this.opponentMoveIndicator.style.visibility = 'visible';
-        this.playerTimer.style.color = 'white';
+        this.playerTimer.style.color = 'gray';
         this.opponentTimer.style.color = 'yellow';
     }
 
@@ -122,8 +122,8 @@ GameData.prototype.updateBoard = function (data) {
 GameData.prototype.placeOpponentMove = function (x, y) {
     let id = String.fromCharCode(x + 97) + y;
     let hex = document.querySelector('#' + id);
-    hex.childNodes[0].className = this.otherPlayer + 'Hex';
-    hex.childNodes[0].childNodes[0].className = this.otherPlayer + 'Hex';
+    hex.childNodes[0].className = this.otherPlayer + ' hex';
+    hex.childNodes[0].childNodes[0].className = this.otherPlayer + ' hex';
 }
 
 // announce winner

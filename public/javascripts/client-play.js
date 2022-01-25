@@ -20,8 +20,8 @@ for (let h of hexes) {
                 window.gameData.board[line][col] = window.gameData.playerToken;
 
                 // update hex color
-                this.childNodes[0].className = window.gameData.playerType + 'Hex';
-                this.childNodes[0].childNodes[0].className = window.gameData.playerType + 'Hex';
+                this.childNodes[0].className = window.gameData.playerType + ' hex';
+                this.childNodes[0].childNodes[0].className = window.gameData.playerType + ' hex';
 
                 // send move to server
                 sendMove(window.gameData.playerToken, line, col);
